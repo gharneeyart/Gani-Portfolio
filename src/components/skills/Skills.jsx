@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Html from '../../assets/icon/icons8-html-5-48.png';
 import Css from '../../assets/icon/icons8-css-48.png';
 import Js from '../../assets/icon/icons8-javascript-48.png';
@@ -14,26 +14,28 @@ import Mongodb from '../../assets/icon/icons8-mongodb-48.png';
 import Github from '../../assets/icon/icons8-github-48.png';
 import Git from '../../assets/icon/icons8-git-48.png';
 import { motion } from 'framer-motion'
+import { PageTheme } from '../../contexts/ThemeContext';
 
 const Skills = () => {
+  const { theme } = useContext(PageTheme)
   return (
-    <div className=' h-auto flex justify-center items-center py-8 bg-bodyColor'>
+    <div className={`bg-${theme}  ${theme === "dark" ? "bg-slate-200" : "bg-bodyColor" } h-auto flex justify-center items-center py-8 `} >
       <motion.div className="flex flex-col justify-center w-11/12 container mx-auto "
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}>
         <div className="flex flex-col justify-center items-center mb-6">
-        <h3 className='text-gray-100  font-outfit text-xl font-medium'>My <span className='text-designColor italic'>Skills</span></h3>
-          <p className='mt-2 text-center font-poppins text-gray-200'>The language, technologies and tools that I am really good at:</p>
+        <h3 className={` ${theme === 'dark' ? 'text-black' : 'text-gray-100'}  font-outfit text-xl font-medium`}>My <span className={`${theme === 'dark' ? 'text-blue-600' : 'text-designColor'} italic`}>Skills</span></h3>
+          <p className={`mt-2 text-center font-poppins ${theme === 'dark' ? 'text-black' : 'text-gray-200'}`}>The language, technologies and tools that I am really good at:</p>
         </div>
-        <div className="grid grid-cols-3  md:grid-cols-5 gap-4 justify-center w-full font-k2d text-gray-200 font-semibold">
+        <div className={`grid grid-cols-3  md:grid-cols-5 gap-4 justify-center w-full font-k2d ${theme === 'dark' ? 'text-black' : 'text-gray-200'}  font-semibold`}>
           <div className="flex justify-center flex-col items-center">
             <img src={Html} alt="HTML" className='w-12 h-12' />
-            <p className='text-gray-200'>Html</p>
+            <p className=''>Html</p>
           </div>
           <div className="flex justify-center flex-col items-center">
             <img src={Css} alt="CSS" className='w-12 h-12' />
-            <p className='text-gray-200'>Css</p>
+            <p className=''>Css</p>
           </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">
             <img src={Js} alt="JavaScript" className='w-12 h-12' />
@@ -53,7 +55,7 @@ const Skills = () => {
           </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">
             {/* <img src={Next} alt="Next.js" className='w-12 h-12' /> */}
-            <RiNextjsFill className='text-gray-200' size={50}/>
+            <RiNextjsFill className={`${theme === 'dark' ? 'text-gray-800' : 'text-gray-200'}`} size={50}/>
             <p>Next</p>
           </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">
@@ -62,7 +64,7 @@ const Skills = () => {
           </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">
             {/* <img src={Express} alt="Express.js" className='w-12 h-12' /> */}
-            <SiExpress className='text-gray-200' size={50}/>
+            <SiExpress className={`${theme === 'dark' ? 'text-gray-800' : 'text-gray-200'}`} size={50}/>
             <p>Express.js</p>
           </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">

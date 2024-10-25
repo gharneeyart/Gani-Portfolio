@@ -35,7 +35,7 @@ const Hero = () => {
             cursorColor="#8A42DB"
           />
         </h2>
-          <p className='text-base md:text-lg  mt-2 md:mt-4 text-gray-200'>A creative Full Stack Developer with a flair for building sleek, interactive websites. I work with the MERN stack to bring ideas to life—from crafting smooth, responsive designs to building robust back-end systems. I’m all about blending creativity with code to deliver seamless digital experiences. Let’s create something amazing together!</p>
+          <p className='text-base md:text-lg  mt-2 md:mt-4 text-gray-200 font-k2d'>A creative Full Stack Developer with a flair for building sleek, interactive websites. I work with the MERN stack to bring ideas to life—from crafting smooth, responsive designs to building robust back-end systems. I’m all about blending creativity with code to deliver seamless digital experiences. Let’s create something amazing together!</p>
         </div>
         <div className="space-y-2 md:space-y-0 flex flex-col md:flex-row md:gap-8">
           <div className="flex items-center text-white"><span><GrLocation size={25} className='mr-2 text-designColor' /></span> <span>Lagos, Nigeria</span></div>

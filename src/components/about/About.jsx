@@ -55,7 +55,7 @@ const About = () => {
           
           </motion.div>
           {isMobile ? (
-        <div className="w-full lg:w-1/2 text-base font-medium space-y-4 text-gray-200 font-k2d">
+        <div className="w-full lg:w-1/2 text-base  space-y-4 text-gray-200 font-k2d">
           <h3 className="text-gray-100 font-outfit text-xl font-medium">
             About <span className="text-designColor italic">Me</span>
           </h3>
@@ -68,7 +68,7 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 text-base font-medium space-y-4 text-gray-200 font-k2d"
+          className="w-full lg:w-1/2 text-base  space-y-4 text-gray-200 font-k2d"
         >
           <h3 className="text-gray-100 font-outfit text-xl font-medium">
             About <span className="text-designColor italic">Me</span>

@@ -83,18 +83,20 @@
 
 
 
-
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { Link, Events } from 'react-scroll'
 import { PiReadCvLogo } from "react-icons/pi";
+import { IoSunny } from "react-icons/io5";
+import { FaRegMoon } from "react-icons/fa6";
 import resume from '../../public/My Resume (2).pdf'
-
+import {PageTheme} from '../../src/contexts/ThemeContext'
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [activeLink, setActiveLink] = useState("home")
   const navRef = useRef(null)
+  const { theme, toggleTheme } = useContext(PageTheme);
 
   const handleClick = () => setClick(!click)
 
@@ -139,7 +141,7 @@ const Navbar = () => {
           <Link to='home' className="font-outfit text-2xl text-gray-100">Ganiyat <span className='text-designColor'>Shuaib</span></Link>
         </div>
         <button 
-          className="block lg:hidden text-primary-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent" 
+          className="block lg:hidden menu-icon text-white" 
           onClick={handleClick}
           aria-label={click ? "Close menu" : "Open menu"}
         >
@@ -179,6 +181,15 @@ const Navbar = () => {
       </button>
     </a>
             </li>
+            <div className="text-white" onClick={toggleTheme}>
+            {theme === "dark" ? (
+                <IoSunny className=''/>
+              ) : (
+                <FaRegMoon className=''/>
+              )}
+              
+              
+            </div>
           </ul>
         </div>
       </div>
