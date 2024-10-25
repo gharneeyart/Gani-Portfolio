@@ -8,10 +8,11 @@ const Footer = () => {
     <footer className="bg-bodyColor text-white py-8 ">
       <div className=" px-4 container mx-auto w-11/12">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="mb-4 md:mb-0">
+        <p className="mt-2 text-lg">&copy; Ganiyat Shuaib {new Date().getFullYear()}</p>
+          {/* <div className="mb-4 md:mb-0">
             Ganiyat
-            {/* <img src={Logo} alt="Logo" className="h-10" /> */}
-          </div>
+            <img src={Logo} alt="Logo" className="h-10" />
+          </div> */}
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a href="https://github.com/gharneeyart" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
               <FaGithub className="h-6 w-6" />
@@ -28,10 +29,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="mt-4 text-center text-base">
-         
-          <p className="mt-2">&copy; {new Date().getFullYear()}.Ganiyat Shuaib</p>
-        </div>
+        
       </div>
     </footer>
   );

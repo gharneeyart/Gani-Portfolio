@@ -27,13 +27,14 @@ const Skills = () => {
           <p className='mt-2 text-center font-poppins text-gray-200'>The language, technologies and tools that I am really good at:</p>
         </div>
         <div className="grid grid-cols-3  md:grid-cols-5 gap-4 justify-center w-full font-k2d text-gray-200 font-semibold">
-          {/* <div className="flex justify-center flex-col items-center">
+          <div className="flex justify-center flex-col items-center">
             <img src={Html} alt="HTML" className='w-12 h-12' />
             <p className='text-gray-200'>Html</p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center flex-col items-center">
             <img src={Css} alt="CSS" className='w-12 h-12' />
-          </div> */}
+            <p className='text-gray-200'>Css</p>
+          </div>
           <div className="flex justify-center flex-col items-center gap-2 hover:scale-110 duration-300">
             <img src={Js} alt="JavaScript" className='w-12 h-12' />
             <p className=''>JavaScript</p>

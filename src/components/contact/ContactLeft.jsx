@@ -12,9 +12,9 @@ const ContactLeft = () => {
     <div className="">
     <img src={ProfileImg} alt="John Doe" className="rounded-full w-36 h-36  md:w-40 md:h-40 object-cover shadow-2xl border-4 border-blue-400" />
     </div>
-    <h5 className="text-xl italic text-white tracking-wide font-k2d">
-      Contact Me
-    </h5>
+    <h3 className="text-gray-100 font-outfit text-xl font-medium">
+            Contact <span className="text-designColor italic">Me</span>
+          </h3>
     <h2 className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-wide font-semibold">
     Enjoyed my work? Let’s work together
     </h2>

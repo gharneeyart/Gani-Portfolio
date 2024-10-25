@@ -7,17 +7,7 @@ import Works from '../src/components/portfolio/Works'
 import Contact from '../src/components/contact/Contact'
 import Navbar from './layout/Nav'
 import Footer from './layout/Footer'
-// import Portfolio from './components/hero/Port'
-// import Home from './pages/Home'
-// import About from './pages/About'
-// import Skills from './pages/Skills'
-// import Experience from './pages/Experience'
-// import Works from './pages/Works'
-// import Contact from './pages/Contact'
 import './App.css'
-// import RecentProjects from './components/portfolio/RecentProjects'
-// import Footer from './components/Footer'
-// import Navbar from './components/Nav'
 
 
 
@@ -28,7 +18,9 @@ function App() {
     <>
       <div className=' bg-bodyColor'>
         <Navbar/>
+        <div className="" id='home'>
         <Hero/>
+        </div>
         <div id='about'>
         <About/>
         </div>
