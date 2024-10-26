@@ -61,14 +61,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className={` py-20  `}>
+    <section id="contact" className={` py-16  `}>
      <div className="container mx-auto w-11/12">
      <div className="flex justify-center items-center text-center">
         {/* <Title title="CONTACT" des="Contact With Me" /> */}
       </div>
       <div className="w-full">
         <div className="w-full h-auto flex flex-col lg:flex-row justify-between">
-          <motion.div className={`w-full h-full py-10  ${theme === "dark" ? "bg-slate-200" : "bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne " }  flex flex-col lg:flex-row gap-8 p-4 lg:p-8 rounded-lg items-center`}
+          <motion.div className={`w-full h-full py-10  ${theme === "dark" ? "bg-slate-300" : "bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne " }  flex flex-col lg:flex-row gap-8 p-4 lg:p-8 rounded-lg items-center`}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}>
@@ -82,7 +82,7 @@ const Contact = () => {
                   <input
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
-                    className={`contactInput  ${errors.username && "outline-designColor"}`}
+                    className={`contactInput ${theme === 'dark' ? 'text-white' : 'contactInput'} ${errors.username && "outline-designColor"}`}
                     type="text"
                   />
                   {errors.username && (
@@ -98,7 +98,7 @@ const Contact = () => {
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  className={`contactInput  ${errors.email && "outline-designColor"}`}
+                  className={`contactInput ${theme === 'dark' ? 'text-white' : 'contactInput'} ${errors.email && "outline-designColor"}`}
                   type="email"
                 />
                 {errors.email && (
@@ -113,7 +113,7 @@ const Contact = () => {
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
-                  className={`contactTextArea ${errors.message && "outline-designColor"}`}
+                  className={`contactTextArea ${theme === 'dark' ? 'text-white' : 'contactTextArea'} ${errors.message && "outline-designColor"}`}
                   cols="30"
                   rows="8"
                 ></textarea>

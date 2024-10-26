@@ -19,7 +19,7 @@ import { PageTheme } from '../../contexts/ThemeContext';
 const Skills = () => {
   const { theme } = useContext(PageTheme)
   return (
-    <div className={`bg-${theme}  ${theme === "dark" ? "bg-slate-200" : "bg-bodyColor" } h-auto flex justify-center items-center py-8 `} >
+    <div className={`bg-${theme}  ${theme === "dark" ? "bg-slate-300" : "bg-bodyColor" } h-auto flex justify-center items-center py-8 `} >
       <motion.div className="flex flex-col justify-center w-11/12 container mx-auto "
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

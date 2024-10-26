@@ -14,17 +14,17 @@ const Footer = () => {
             <img src={Logo} alt="Logo" className="h-10" />
           </div> */}
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://github.com/gharneeyart" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            <a href="https://github.com/gharneeyart" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-designColor transition-colors duration-300">
               <FaGithub className="h-6 w-6" />
             </a>
-            <a href="https://x.com/Gharneeyart20?t=aE_FvOJyFgk9ocZTtX10iQ&s=09" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            <a href="https://x.com/Gharneeyart20?t=aE_FvOJyFgk9ocZTtX10iQ&s=09" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-designColor transition-colors duration-300">
              
               <FaXTwitter className="h-6 w-6"/>
             </a>
-            <a href="https://www.linkedin.com/in/shuaib-ganiyat-a49482273" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            <a href="https://www.linkedin.com/in/shuaib-ganiyat-a49482273" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-designColor transition-colors duration-300">
               <FaLinkedin className="h-6 w-6" />
             </a>
-            <a href="https://www.instagram.com/gharneeyart20?igsh=MWwzY29ldXkzdTVlaA==" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">
+            <a href="https://www.instagram.com/gharneeyart20?igsh=MWwzY29ldXkzdTVlaA==" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-designColor transition-colors duration-300">
               <FaInstagram className="h-6 w-6" />
             </a>
           </div>

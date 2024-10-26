@@ -25,7 +25,7 @@ const Works = () => {
       title: 'FragranceHub',
       image: P1,
       description: 'FragranceHub is an ecommerce fullstack application built using React for the frontend and Node.js for the backend. The application allows users to browse through products, add them to their cart, and proceed to checkout.',
-      github: 'https://github.com/example',
+      github: '',
       live: 'https://frangrancehubwebv2.vercel.app/',
       stack: [<FaReact/>, <DiCss3 /> , <BsBootstrap />, <FaNodeJs/>, <SiExpress />, <SiMongodb />]
     },
@@ -34,7 +34,7 @@ const Works = () => {
       title: 'BIZFIDES',
       image: P2,
       description: 'Bizfides is a website platform designed to help businesses establish and enhance their online presence by providing a range of tools, and services, such as website building, SEO optimization, expert advice, networking opportunities, with the goal of supporting online business growth and success.',
-      github: 'https://github.com/example',
+      github: '',
       live: 'https://bizfides--eight.vercel.app/',
       stack: [<FaReact/>, <SiTailwindcss/> , <FaNodeJs/>, <SiExpress />, <SiMongodb />]
     },
@@ -67,7 +67,7 @@ const Works = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1  gap-6 xl:gap-14">
       {works.map((work, index) => (
-      <motion.div key={work.id}  className={`w-full p-4 xl:px-10 h-auto rounded-lg  flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} flex ${theme === "dark" ? "bg-slate-200" : "bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900" }  transition-colors duration-1000 items-center gap-8 py-8`} initial={{ opacity: 0, y: 50 }}
+      <motion.div key={work.id}  className={`w-full p-4 xl:px-10 h-auto rounded-lg  flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} flex ${theme === "dark" ? "bg-slate-300" : "bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900" }  transition-colors duration-1000 items-center gap-8 py-8`} initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}>
       <div className={`w-full lg:w-[70rem] h-72 md:h-80 overflow-hidden rounded-xl hover:rounded-none border-b-8  hover:border-0 shadow-blue-600 ${theme === 'dark' ? 'border-blue-600' : 'border-designColor  '}`}>

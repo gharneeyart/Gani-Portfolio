@@ -17,7 +17,7 @@ function App() {
   const { theme } = useContext(PageTheme)
   return (
     <>
-      <div  className={`bg-${theme}  ${theme === "dark" ? "bg-gradient-to-r from-blue-200 to-purple-400" : "bg-bodyColor" }`}>
+      <div  className={`bg-${theme}  ${theme === "dark" ? "bg-gradient-to-r from-blue-300 to-purple-500" : "bg-bodyColor" }`}>
         <Navbar/>
         <div className="" id='home'>
         <Hero/>

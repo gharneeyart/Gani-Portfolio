@@ -92,6 +92,8 @@ import { IoSunny } from "react-icons/io5";
 import { FaRegMoon } from "react-icons/fa6";
 import resume from '../../public/My Resume (2).pdf'
 import {PageTheme} from '../../src/contexts/ThemeContext'
+import { motion, AnimatePresence } from "framer-motion";
+// import Logo from '../assets/icon/mylogo.png'
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [activeLink, setActiveLink] = useState("home")
@@ -147,6 +149,7 @@ const Navbar = () => {
         >
           {click ? <IoClose size={30}/> : <HiOutlineMenuAlt3 size={30}/>}
         </button>
+        
         <div
           className={`duration-500 lg:static bg-customLightBlue lg:bg-transparent absolute top-0 left-0 w-full pt-4 pb-8 lg:pt-0 lg:pb-0 ${
              click ? 'block top-[100%] bg-bodyColor' : 'hidden  top-[12%]' 
@@ -175,23 +178,42 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-            <a href={resume} download="My_Resume.pdf">
+            {/* <a href={resume} download="My_Resume.pdf">
       <button className=" w-36 border-2 rounded-lg border-designColor text-gray-200 font-medium flex items-center justify-center">
         <PiReadCvLogo className="mr-2" /> Resume
       </button>
-    </a>
+    </a> */}
             </li>
-            <div className="text-white" onClick={toggleTheme}>
+            
+          </ul>
+          <div className="text-white lg:mt-1 " onClick={toggleTheme}>
+            <AnimatePresence mode="wait" initial={false}>
             {theme === "dark" ? (
-                <IoSunny className=''/>
-              ) : (
-                <FaRegMoon className=''/>
-              )}
-              
+      <motion.div
+        key="sun"
+        initial={{ opacity: 0, y: -20 }} // Start from above
+        animate={{ opacity: 1, y: 0 }}  // Move to center
+        exit={{ opacity: 0, y: 20 }}    // Exit toward the bottom
+        transition={{ duration: 0.5 }}
+      >
+        <IoSunny size={25} className="" />
+      </motion.div>
+    ) : (
+      <motion.div
+        key="moon"
+        initial={{ opacity: 0, y: -20 }} // Start from above
+        animate={{ opacity: 1, y: 0 }}  // Move to center
+        exit={{ opacity: 0, y: 20 }}    // Exit toward the bottom
+        transition={{ duration: 0.5 }}
+      >
+        <FaRegMoon size={25} className="text-blue-400" />
+      </motion.div>
+    )}
+  </AnimatePresence>
               
             </div>
-          </ul>
         </div>
+        
       </div>
     </nav>
   )
