@@ -101,7 +101,7 @@ const Hero = () => {
                <motion.img
       src={ProfileImg}
       alt="John Doe"
-      className={`rounded-full w-64 h-64 mx-auto md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover shadow-2xl border-4 ${theme === 'dark' ? 'border-blue-600' : 'border-blue-400'}`}
+      className={`rounded-full w-64 h-64 mx-auto md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover shadow-2xl border-4 ${theme === 'dark' ? 'border-black' : 'border-blue-400'}`}
       initial={{ borderWidth: "4px" }}
       animate={{ borderWidth: "8px" }}
       transition={{

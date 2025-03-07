@@ -3,6 +3,8 @@ import ContacImg from '../../assets/man standing on chats 1.svg';
 import ContactLeft from './ContactLeft';
 import { motion } from 'framer-motion'
 import { PageTheme } from '../../contexts/ThemeContext';
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
   const { theme } = useContext(PageTheme)
@@ -24,41 +26,54 @@ const Contact = () => {
   const handleSend = (e) => {
     e.preventDefault();
     let errorMessages = {};
-
-    // Validation
+  
     if (username === "") {
       errorMessages.username = "Username is required!";
     }
-    // if (phoneNumber === "") {
-    //   errorMessages.phoneNumber = "Phone number is required!";
-    // }
     if (email === "") {
-      errorMessages.email = "Please give your Email!";
+      errorMessages.email = "Please provide your Email!";
     } else if (!emailValidation(email)) {
-      errorMessages.email = "Give a valid Email!";
+      errorMessages.email = "Provide a valid Email!";
     }
-    // if (subject === "") {
-    //   errorMessages.subject = "Please give your Subject!";
-    // }
     if (message === "") {
       errorMessages.message = "Message is required!";
     }
-
-    // If there are error messages, set them; otherwise, proceed
+  
     if (Object.keys(errorMessages).length > 0) {
       setErrors(errorMessages);
-    } else {
-      setSuccessMsg(
-        `Thank you, ${username}. Your message has been sent successfully!`
-      );
-      setErrors({});
-      setUsername("");
-      // setPhoneNumber("");
-      setEmail("");
-      // setSubject("");
-      setMessage("");
+      return;
     }
+  
+    // EmailJS parameters
+    const templateParams = {
+      username: username,
+      email: email,
+      message: message,
+    };
+  
+    emailjs
+      .send(
+        'service_d44xtzm',  // Replace with your EmailJS service ID
+        'template_3wiu05c', // Replace with your EmailJS template ID
+        templateParams,
+        'ojacitG1KKlLimxD7'   // Replace with your EmailJS public key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setSuccessMsg(`Thank you, ${username}. Your message has been sent successfully!`);
+          setErrors({});
+          setUsername("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setSuccessMsg("Failed to send message. Please try again.");
+        }
+      );
   };
+  
 
   return (
     <section id="contact" className={` py-16  `}>
